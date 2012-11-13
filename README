@@ -9,5 +9,5 @@ Nutshell
 Here a simple example to validate eMail:
 
     >> import emailvalid
-    >> emailvalid.check_email('youremail@emailprovider.com')
+    >> emailvalid.check_email('user@domain.com')
     True

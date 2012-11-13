@@ -9,6 +9,7 @@ __version__ = '1.0'
 
 import re
 
+
 def check_email(email):
     """ Get if email is valid. @ and . characters validation
     :email: str
@@ -18,7 +19,7 @@ def check_email(email):
             '''@[A-Za-z0-9\.!#\$%&'\*\+-/=\?\^_`\{|\}~]+\.[a-zA-Z]*$''')
     if not email:
         return False
-    email = email.replace(';',',') #replace emails separator ; -> ,
+    email = email.replace(';', ',')  # Replace emails separator ; -> ,
     emails = email.split(',')
     for email in emails:
         if not re.match(patern, email.strip()):
