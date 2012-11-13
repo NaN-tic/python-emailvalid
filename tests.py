@@ -8,11 +8,14 @@ import unittest
 import emailvalid
 
 EMAILS = (
-    ('username@example.com; anotheruser@example.com', True),
-    ('username@mi-domain', False),
-    ('another,user@example.com', False),
-    ('another;user@example.com', False),
+    ('username@domain.com, anotheruser@domain.com', True),
+    ('username@domain.com; anotheruser@domain.com', True),
+    ('username@domain.com;anotheruser@domain.com', True),
+    ('username@domain', False),
+    ('another,user@domain.com', False),
+    ('another;user@domain.com', False),
 )
+
 
 class BankNumberTest(unittest.TestCase):
     '''
